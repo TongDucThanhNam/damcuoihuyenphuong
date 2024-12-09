@@ -5,7 +5,7 @@ import {Image, Spacer} from "@nextui-org/react";
 
 export default function SectionTwo() {
     return (
-        <div className="w-screen h-screen relative overflow-y-scroll">
+        <div className="w-screen h-screen relative overflow-y-scroll bg-black">
             <div
                 className="absolute inset-0 bg-cover bg-center filter"
                 style={{backgroundImage: "url('/hero.webp')"}}

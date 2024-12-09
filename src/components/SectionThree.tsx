@@ -98,6 +98,13 @@ export default function SectionThree() {
             title: "2023",
             content: (
                 <div className={"flex container"}>
+                    <p className={"text-black text-xl"}>
+                        Đầu năm 2023, chúng mình bắt đầu thực tập ở cùng một công ty và từ đây chúng mình gần như dành
+                        phần lớn thới gian cho nhau. &#34;Sáng đèo nhau đi học chiều lai nhau đi làm ^^&#34;. Đây cũng
+                        là khoảng
+                        thời gian vui vẻ nhất trong 4 năm sinh viên của chúng mình. Cùng nhau học tập, làm việc, ăn
+                        chơi,...
+                    </p>
                     <div className={"flex justify-center grid-cols-2 space-x-8"}>
                         <Image
                             isBlurred={true}
