@@ -77,19 +77,23 @@ const Slider: React.FC<SliderProps> = ({ children }) => {
             </div>
 
             <div
-                className={"fixed bottom-4 right-4 flex space-x-2"}
+                className={"fixed bottom-6 right-8 flex space-x-2"}
             >
                 <Button
+                    color={"default"}
+                    variant={"bordered"}
                     isIconOnly={true}
-                    className="bg-black"
+                    className=""
                     onClick={goToPrevious}
                     aria-label="Previous slide"
                 >
                     <ChevronLeftIcon className="w-6 h-6"/>
                 </Button>
                 <Button
+                    color={"default"}
+                    variant={"bordered"}
                     isIconOnly={true}
-                    className=" bg-black"
+                    className=" "
                     onClick={goToNext}
                     aria-label="Next slide"
                 >
