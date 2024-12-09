@@ -9,7 +9,7 @@ import {
     ModalHeader,
     Popover,
     PopoverContent,
-    PopoverTrigger, Spacer, useDisclosure
+    PopoverTrigger, Radio, RadioGroup, Spacer, useDisclosure
 } from "@nextui-org/react";
 import {
     SendIcon,
@@ -90,7 +90,7 @@ export default function SectionOne() {
             <div className="relative w-full h-full flex flex-col justify-center items-center"
             >
                 <div className="flex flex-col justify-center items-center">
-                    <h1 className="md:text-6xl text-4xl font-bold text-blue-300 mt-56 md:mt-40 text-center sm:text-left">
+                    <h1 className="md:text-6xl text-4xl font-bold text-blue-300 mt-56 text-center sm:text-left">
                         <span className="block sm:inline">Trung Huyên</span>
                         <span className="block sm:inline">&hearts;</span>
                         <span className="block sm:inline">Nguyễn Phượng</span>
@@ -125,6 +125,12 @@ export default function SectionOne() {
                                                     onClose();
                                                 }}
                                             >
+                                                <RadioGroup label="Bạn là khách của"
+                                                    isRequired={true}
+                                                >
+                                                    <Radio value="groom">Nhà trai</Radio>
+                                                    <Radio value="bride">Nhà gái</Radio>
+                                                </RadioGroup>
                                                 <Input
                                                     isRequired
                                                     errorMessage="Vui lòng nhập đúng tên"
