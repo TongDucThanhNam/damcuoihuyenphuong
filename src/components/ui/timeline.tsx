@@ -35,7 +35,8 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
     return (
         <div
-            className="w-full font-sans md:px-10 bg-gradient-to-r from-violet-200 to-pink-200"
+            className="w-full font-sans md:px-10"
+            color={""}
             ref={containerRef}
         >
 
@@ -43,7 +44,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                 <h2 className="text-lg md:text-4xl mb-4 text-black max-w-4xl">
                     ♥ Hành Trình Tình Yêu: Chuyện Đôi Ta
                 </h2>
-                <p className="text-neutral-700 text-sm md:text-base max-w-sm">
+                <p className="text-neutral-700 text-xl max-w-sm">
                     Từ những ngày đầu gặp gỡ, qua từng khoảnh khắc ngọt ngào đến những dấu mốc đáng nhớ, cùng nhau vẽ
                     nên bức tranh tình yêu rực rỡ. Hãy cùng nhìn lại hành trình đặc biệt mà chỉ đôi ta hiểu!
                 </p>
@@ -85,7 +86,6 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                             height: heightTransform,
                             opacity: opacityTransform,
                         }}
-
                     />
                 </div>
             </div>

@@ -1,65 +1,36 @@
-import {Cell, PolarAngleAxis, RadialBar, RadialBarChart, ResponsiveContainer} from "recharts";
-
 interface CountDownProps {
-    chartData: any[]
-    color: string
-    total: number
+    timeLeft: { [key: string]: number }
 }
 
 export default function CountDown(
     {
-        chartData,
-        color,
-        total
-    } : CountDownProps
+        timeLeft
+    }: CountDownProps
 ) {
     return (
-        <ResponsiveContainer
-            className="[&_.recharts-surface]:outline-none"
-            height="100%"
-            width="100%"
-        >
-            <RadialBarChart
-                barSize={10}
-                cx="50%"
-                cy="50%"
-                data={chartData}
-                endAngle={-45}
-                innerRadius={90}
-                outerRadius={70}
-                startAngle={225}
-            >
-                <PolarAngleAxis angleAxisId={0} domain={[0, total]} tick={false} type="number"/>
-                <RadialBar
-                    angleAxisId={0}
-                    animationDuration={1000}
-                    animationEasing="ease"
-                    background={{
-                        fill: "hsl(var(--nextui-default-100))",
-                    }}
-                    cornerRadius={12}
-                    dataKey="value"
-                >
-                    {chartData.map((_: any, index: any) => (
-                        <Cell
-                            key={`cell-${index}`}
-                            // fill={`hsl(var(--nextui-${color === "default" ? "foreground" : color}))`}
-                            fill={"#6696ff"}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 space-x-8 md:space-x-0 md:gap-8 max-w-4xl mx-auto">
+            {Object.entries(timeLeft).map(([key, value]) => (
+                <div key={key} className="flex flex-col items-center">
+                    <div
+                        className="flex aspect-square  items-center justify-center rounded-lg bg-background/10 backdrop-blur backdrop-saturate-150"
+                    >
+                        <div className={"p-4 "}>
+                            <span className="text-4xl md:text-6xl lg:text-7xl font-bold text-pink-200">
+                                {value.toString().padStart(2, '0')}
+                             </span>
+                            <div className="text-center text-pink-200">
+                                {
+                                    key === 'days' ? 'Ngày' :
+                                        key === 'hours' ? 'Giờ' :
+                                            key === 'minutes' ? 'Phút' :
+                                                key === 'seconds' ? 'Giây' : ''
+                                }
+                            </div>
+                        </div>
+                    </div>
 
-                        />
-                    ))}
-                </RadialBar>
-                <g>
-                    <text textAnchor="middle" x="50%" y="48%">
-                        <tspan className="fill-foreground text-black font-bold text-xl" dy="-0.5em" x="50%">
-                            {chartData?.[0].name}
-                        </tspan>
-                        <tspan className="fill-foreground font-semibold text-2xl" dy="1.5em" x="50%">
-                            {(total)}
-                        </tspan>
-                    </text>
-                </g>
-            </RadialBarChart>
-        </ResponsiveContainer>
+                </div>
+            ))}
+        </div>
     )
 }

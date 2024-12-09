@@ -64,13 +64,13 @@ const Slider: React.FC<SliderProps> = ({ children }) => {
     return (
         <div className="relative w-full h-screen overflow-hidden" ref={sliderRef}>
             <div
-                className="flex transition-transform duration-300 ease-in-out h-full"
+                className="flex transition-transform duration-300 ease-in-out h-full w-full"
                 style={{transform: `translateX(-${currentIndex * 100}%)`}}
                 onTouchStart={handleTouchStart}
                 onTouchMove={handleTouchMove}
             >
                 {React.Children.map(children, (child, index) => (
-                    <div key={index} className="w-full h-full flex-shrink-0">
+                    <div key={index} className="w-full h-full flex-shrink-0 overflow-hidden">
                         {child}
                     </div>
                 ))}
@@ -80,21 +80,25 @@ const Slider: React.FC<SliderProps> = ({ children }) => {
                 className={"fixed bottom-6 right-8 flex space-x-2"}
             >
                 <Button
-                    color={"default"}
-                    variant={"bordered"}
+                    color={"primary"}
+                    variant={"shadow"}
                     isIconOnly={true}
                     className=""
                     onClick={goToPrevious}
+                    onTouchStart={goToPrevious}
+
                     aria-label="Previous slide"
                 >
                     <ChevronLeftIcon className="w-6 h-6"/>
                 </Button>
                 <Button
-                    color={"default"}
-                    variant={"bordered"}
+                    color={"primary"}
+                    variant={"shadow"}
                     isIconOnly={true}
                     className=" "
                     onClick={goToNext}
+                    onTouchStart={goToNext}
+
                     aria-label="Next slide"
                 >
                     <ChevronRightIcon className="w-6 h-6"/>

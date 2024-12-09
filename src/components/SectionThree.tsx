@@ -10,7 +10,7 @@ export default function SectionThree() {
             title: "2020",
             content: (
                 <div>
-                    <p className={"text-black"}>
+                    <p className={"text-black text-xl"}>
                         Chúng mình học cùng lớp hồi đại học đã từng là bạn &#34; khá thân &#34; từ hồi mới vào học.
                         Đã
                         từng nói
@@ -22,13 +22,10 @@ export default function SectionThree() {
                     </p>
                     <div className={"flex justify-center grid-cols-2 space-x-8"}>
                         <Image
+                            isBlurred={true}
                             src="2020.jpeg"
                             alt="2020"
-                            className="rounded-lg"
-                        />
-                        <Image
-                            src="2020.jpeg"
-                            alt="2020"
+                            height={500}
                             className="rounded-lg"
                         />
                     </div>
@@ -39,7 +36,7 @@ export default function SectionThree() {
             title: "2021",
             content: (
                 <div>
-                    <p className={"text-black"}>
+                    <p className={"text-black text-xl"}>
                         Thời điểm đó, chúng mình đều đang độc thân. <br/> Phượng ở Quốc Oai còn mình ở Hà Nam, do
                         ảnh
                         hưởng của dịch covid nên cơ hội gặp nhau không nhiều. <br/>Dù vậy chúng mình vẫn luôn dành thời
@@ -49,11 +46,13 @@ export default function SectionThree() {
                     </p>
                     <div className={"flex justify-center grid-cols-2 space-x-8"}>
                         <Image
+                            isBlurred={true}
                             src="2021a.jpg"
                             alt="2020"
                             className="rounded-lg"
                         />
                         <Image
+                            isBlurred={true}
                             src="2021b.jpg"
                             alt="2020"
                             className="rounded-lg"
@@ -66,9 +65,9 @@ export default function SectionThree() {
             title: "2022",
             content: (
                 <div>
-                    <p className={"text-black"}>
+                    <p className={"text-black text-xl"}>
                         Năm 2022 ảnh hưởng của dịch giảm dần, chúng mình quay trở lại giảng đường và có nhiều thời
-                        gian đi chơi cùng nhau hơn.<br/>
+                        gian đi chơi cùng nhau hơn. <br/>
                         Và rồi tới 1 ngày đặc biệt, ngày 11/05/2022 khi cả 2 đã suy nghĩ đủ kỹ về mối quan hệ, thì chúng
                         mình đã quyết định nói hết cảm xúc của mình với đối phương. <br/> Và sau ngày định mệnh đó, đã
                         có &#34;
@@ -77,11 +76,15 @@ export default function SectionThree() {
                     </p>
                     <div className={"flex justify-center grid-cols-2 space-x-8"}>
                         <Image
+                            isBlurred={true}
+
                             src="2022a.jpg"
                             alt="2020"
                             className="rounded-lg"
                         />
                         <Image
+                            isBlurred={true}
+
                             src="2023.jpg"
                             alt="2020"
                             className="rounded-lg"
@@ -97,16 +100,15 @@ export default function SectionThree() {
                 <div className={"flex container"}>
                     <div className={"flex justify-center grid-cols-2 space-x-8"}>
                         <Image
-                            src="2023.jpg"
-                            alt="2020"
-                            className="rounded-lg"
-                        />
-                        <Image
+                            isBlurred={true}
+
                             src="2023a.jpg"
                             alt="2020"
                             className="rounded-lg"
                         />
                         <Image
+                            isBlurred={true}
+
                             src="2023b.jpg"
                             alt="2020"
                             className="rounded-lg"
@@ -125,7 +127,7 @@ export default function SectionThree() {
             title: "2024",
             content: (
                 <div>
-                    <p className={"text-black"}>
+                    <p className={"text-black text-xl"}>
                         Ngày chung đôi: Hơn 2 năm tình bạn, và 2 năm tình yêu không phải là quãng thời gian quá
                         dài, nhưng cũng không quá ngắn, đủ để chúng mình nhận ra nhiều điều. <br/> Cuối cùng ngày vui
                         nhất của
@@ -135,23 +137,31 @@ export default function SectionThree() {
                         chúng
                         ta là Một gia đình hạnh phúc.
                     </p>
-                    <div className={"flex justify-center grid-cols-3 space-x-8"}>
+                    <div className={"grid grid-cols-2 md:grid-cols-4 gap-2"}>
                         <Image
+                            isBlurred={true}
+
                             src="2024a.jpeg"
                             alt="2020"
                             className="rounded-lg"
                         />
                         <Image
+                            isBlurred={true}
+
                             src="2024b.jpg"
                             alt="2020"
                             className="rounded-lg"
                         />
                         <Image
+                            isBlurred={true}
+
                             src="2024c.jpeg"
                             alt="2020"
                             className="rounded-lg"
                         />
                         <Image
+                            isBlurred={true}
+
                             src="2024d.jpg"
                             alt="2020"
                             className="rounded-lg"
@@ -175,7 +185,8 @@ export default function SectionThree() {
         },
     ];
     return (
-        <div className="w-full h-screen overflow-y-scroll bg-gradient-to-r from-indigo-400 to-cyan-400 ">
+        <div className="w-full h-screen overflow-y-scroll"
+             style={{backgroundColor: "#B6E1F6"}}>
 
             <Timeline data={data}/>
         </div>

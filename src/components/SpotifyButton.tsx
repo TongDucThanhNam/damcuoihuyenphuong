@@ -30,6 +30,7 @@ export default function SpotifyButton({ songTitle, artist, albumArt, flacSrc }: 
         <Button
             className="w-full max-w-md h-16 p-0 overflow-hidden bg-white/20 backdrop-blur-md hover:bg-white/30 group"
             onClick={() => setIsPlaying(!isPlaying)}
+            onTouchStart={() => setIsPlaying(!isPlaying)}
         >
             <audio ref={audioRef} src={flacSrc}/>
             <div className="flex items-center w-full px-3 gap-3">
