@@ -3,7 +3,7 @@
 import { Button } from "@nextui-org/react"
 import Image from "next/image"
 import { PauseIcon, PlayIcon } from 'lucide-react'
-import { useState, useRef, useEffect } from "react"
+import React, { useState, useRef, useEffect } from "react"
 
 interface SpotifyButtonProps {
     songTitle: string
@@ -31,7 +31,7 @@ export default function SpotifyButton({ songTitle, artist, albumArt, flacSrc }: 
             className="w-full max-w-md h-16 p-0 overflow-hidden bg-white/20 backdrop-blur-md hover:bg-white/30 group"
             onClick={() => setIsPlaying(!isPlaying)}
         >
-            <audio ref={audioRef} src={flacSrc} />
+            <audio ref={audioRef} src={flacSrc}/>
             <div className="flex items-center w-full px-3 gap-3">
                 {/* Album Art */}
                 <div className="relative w-10 h-10 rounded-md overflow-hidden flex-shrink-0">
@@ -56,9 +56,9 @@ export default function SpotifyButton({ songTitle, artist, albumArt, flacSrc }: 
                 {/* Play/Pause Button */}
                 <div className="flex-shrink-0 text-white">
                     {isPlaying ? (
-                        <PauseIcon className="w-6 h-6" />
+                        <PauseIcon className="w-6 h-6"/>
                     ) : (
-                        <PlayIcon className="w-6 h-6" />
+                        <PlayIcon className="w-6 h-6"/>
                     )}
                 </div>
             </div>

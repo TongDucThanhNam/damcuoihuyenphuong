@@ -43,16 +43,18 @@ export default function CountDown(
                     {chartData.map((_: any, index: any) => (
                         <Cell
                             key={`cell-${index}`}
-                            fill={`hsl(var(--nextui-${color === "default" ? "foreground" : color}))`}
+                            // fill={`hsl(var(--nextui-${color === "default" ? "foreground" : color}))`}
+                            fill={"#6696ff"}
+
                         />
                     ))}
                 </RadialBar>
                 <g>
                     <text textAnchor="middle" x="50%" y="48%">
-                        <tspan className="fill-default-500 text-tiny" dy="-0.5em" x="50%">
+                        <tspan className="fill-foreground text-black font-bold text-xl" dy="-0.5em" x="50%">
                             {chartData?.[0].name}
                         </tspan>
-                        <tspan className="fill-foreground text-medium font-semibold" dy="1.5em" x="50%">
+                        <tspan className="fill-foreground font-semibold text-2xl" dy="1.5em" x="50%">
                             {(total)}
                         </tspan>
                     </text>

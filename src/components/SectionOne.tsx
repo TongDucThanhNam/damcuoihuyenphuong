@@ -4,7 +4,8 @@ import CountDown from "@/components/CountDown";
 import {Button} from "@nextui-org/react";
 import {
     SendIcon,
-} from  "lucide-react";
+} from "lucide-react";
+import MagneticButton from "@/components/ui/ManeticButton";
 
 const data: any[] = [
     {
@@ -29,7 +30,7 @@ const data: any[] = [
         title: "Activity",
         color: "default",
         total: 60,
-        chartData: [{name: "Giây", value: 0, fill: "hsl(var(--nextui-primary))"}],
+        chartData: [{name: "Giây", value: 0, fill: "#6696ff"}],
     },
 ];
 
@@ -44,7 +45,7 @@ export default function SectionOne() {
 
             <div className="relative w-full h-full flex flex-col justify-center items-center">
                 <div className="flex flex-col justify-center items-center">
-                    <h1 className="text-6xl font-bold  mt-40">Bích Phượng &hearts; Trung Huyên</h1>
+                    <h1 className="text-6xl font-bold text-blue-300 mt-40">Trung Huyên &hearts; Nguyễn Phượng</h1>
                     <p className="text-4xl mt-2">We’re getting married</p>
                     <div className={"w-full h-full"}>
                         <div className="flex flex-row w-full h-60">
@@ -55,15 +56,18 @@ export default function SectionOne() {
                         </div>
                     </div>
                     <div>
-                        <Button
-                            className="mt-4"
-                            color={"primary"}
-                            startContent={
-                                <SendIcon/>
-                            }
-                        >
-                            Xác nhận tham dự
-                        </Button>
+                        <MagneticButton>
+
+                            <Button
+                                className="mt-4"
+                                color={"primary"}
+                                startContent={
+                                    <SendIcon/>
+                                }
+                            >
+                                Xác nhận tham dự
+                            </Button>
+                        </MagneticButton>
                     </div>
                 </div>
             </div>
