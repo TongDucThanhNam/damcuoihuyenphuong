@@ -97,7 +97,7 @@ export default function SectionThree() {
         {
             title: "2023",
             content: (
-                <div className={"flex container"}>
+                <div className={""}>
                     <p className={"text-black text-xl"}>
                         Đầu năm 2023, chúng mình bắt đầu thực tập ở cùng một công ty và từ đây chúng mình gần như dành
                         phần lớn thới gian cho nhau. &#34;Sáng đèo nhau đi học chiều lai nhau đi làm ^^&#34;. Đây cũng
