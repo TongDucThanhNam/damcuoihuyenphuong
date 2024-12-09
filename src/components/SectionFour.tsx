@@ -26,6 +26,42 @@ export default function SectionFour() {
             title: "Ảnh cưới 6",
             src: "/NHO03246.JPG",
         },
+        {
+            title: "Ảnh cưới 7",
+            src: "/album/NHO03594.JPG",
+        },
+        {
+            title: "Ảnh cưới 8",
+            src: "/album/NHO03631.JPG",
+        },        {
+            title: "Ảnh cưới 9",
+            src: "/album/NHO03653.JPG",
+        },
+        {
+            title: "Ảnh cưới 10",
+            src: "/album/NHO03668.JPG",
+        },
+        {
+            title: "Ảnh cưới 11",
+            src: "/album/NHO03956.JPG",
+        },
+        {
+            title: "Ảnh cưới 12",
+            src: "/album/NHO04177.JPG",
+        },
+        {
+            title: "Ảnh cưới 13",
+            src: "/album/NHO04275.JPG",
+        },        {
+            title: "Ảnh cưới 14",
+            src: "/album/NHO04364.JPG",
+        },        {
+            title: "Ảnh cưới 15",
+            src: "/album/NHO04406.JPG",
+        },        {
+            title: "Ảnh cưới 16",
+            src: "/album/NHO04433.JPG",
+        },
     ];
 
     return (
