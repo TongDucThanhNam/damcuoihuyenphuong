@@ -1,9 +1,9 @@
 'use client'
 
-import { Button } from "@nextui-org/react"
+import {Button} from "@nextui-org/react"
 import Image from "next/image"
-import { PauseIcon, PlayIcon } from 'lucide-react'
-import React, { useState, useRef, useEffect } from "react"
+import {PauseIcon, PlayIcon} from 'lucide-react'
+import React, {useState, useRef, useEffect} from "react"
 
 interface SpotifyButtonProps {
     songTitle: string
@@ -12,25 +12,30 @@ interface SpotifyButtonProps {
     flacSrc: string
 }
 
-export default function SpotifyButton({ songTitle, artist, albumArt, flacSrc }: SpotifyButtonProps) {
+export default function SpotifyButton({songTitle, artist, albumArt, flacSrc}: SpotifyButtonProps) {
     const [isPlaying, setIsPlaying] = useState(false)
-    const audioRef = useRef<HTMLAudioElement | null>(null)
+    const audioRef = useRef<HTMLAudioElement>(null)
 
-    useEffect(() => {
+    const togglePlay = () => {
         if (audioRef.current) {
             if (isPlaying) {
-                audioRef.current.play()
-            } else {
                 audioRef.current.pause()
+            } else {
+                audioRef.current.play()
             }
+            setIsPlaying(!isPlaying)
         }
-    }, [isPlaying])
+    }
 
     return (
         <Button
-            className="w-full max-w-md h-16 p-0 overflow-hidden bg-white/20 backdrop-blur-md hover:bg-white/30 group"
-            onClick={() => setIsPlaying(!isPlaying)}
-            onTouchStart={() => setIsPlaying(!isPlaying)}
+            className={`
+        w-full max-w-md h-16 p-0 overflow-hidden bg-white/20 backdrop-blur-md hover:bg-white/30 group
+        relative
+        ${isPlaying ? 'animate-border' : ''}
+      `}
+            onClick={togglePlay}
+            onTouchStart={togglePlay}
         >
             <audio ref={audioRef} src={flacSrc}/>
             <div className="flex items-center w-full px-3 gap-3">
@@ -46,12 +51,12 @@ export default function SpotifyButton({ songTitle, artist, albumArt, flacSrc }: 
 
                 {/* Text Content */}
                 <div className="flex flex-col items-start flex-grow min-w-0">
-                  <span className="text-white text-sm font-medium truncate w-full">
-                    {songTitle}
-                  </span>
+          <span className="text-white text-sm font-medium truncate w-full">
+            {songTitle}
+          </span>
                     <span className="text-white/70 text-xs truncate w-full">
-                    {artist}
-                  </span>
+            {artist}
+          </span>
                 </div>
 
                 {/* Play/Pause Button */}
@@ -63,6 +68,9 @@ export default function SpotifyButton({ songTitle, artist, albumArt, flacSrc }: 
                     )}
                 </div>
             </div>
+
+            {/* Animated border */}
+            <div className="absolute inset-0 border-2 border-transparent animate-border-spin"/>
         </Button>
     )
 }

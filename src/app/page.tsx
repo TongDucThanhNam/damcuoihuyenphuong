@@ -1,11 +1,11 @@
 import Slider from "@/components/Slider";
-import SectionOne from "@/components/SectionOne";
-import SectionTwo from "@/components/SectionTwo";
-import SectionThree from "@/components/SectionThree";
-import SectionFour from "@/components/SectionFour";
+import SectionOne from "@/components/Section/SectionOne";
+import SectionTwo from "@/components/Section/SectionTwo";
+import SectionThree from "@/components/Section/SectionThree";
+import SectionFour from "@/components/Section/SectionFour";
 import SpotifyButton from "@/components/SpotifyButton";
-import SectionFive from "@/components/SectionFive";
-import SectionSix from "@/components/SectionSix";
+import SectionFive from "@/components/Section/SectionFive";
+import SectionSix from "@/components/Section/SectionSix";
 
 export default function Home() {
     return (
