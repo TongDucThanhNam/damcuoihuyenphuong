@@ -90,7 +90,7 @@ export default function SectionFive() {
 
                             <div className="flex items-center justify-center gap-2 text-lg mb-4 text-black">
                                 <Calendar className="w-5 h-5 flex-shrink-0"/>
-                                <span>10:00 26/12/2024</span>
+                                <span>09:00 26/12/2024</span>
                             </div>
 
                             <Link
