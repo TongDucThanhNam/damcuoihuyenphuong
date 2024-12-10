@@ -100,8 +100,8 @@ export default function SectionOne() {
             <div className="absolute inset-0 bg-black bg-opacity-50"></div>
             <div className="relative w-full h-full flex flex-col justify-center items-center"
             >
-                <div className="flex flex-col justify-center items-center">
-                    <h1 className="md:text-6xl text-4xl font-bold text-blue-300 mt-56 text-center sm:text-left">
+                <div className="flex flex-col justify-center items-center ">
+                    <h1 className="md:text-6xl text-4xl font-bold text-blue-300 mt-10 md:mt-56 text-center sm:text-left">
                         <span className="block sm:inline">Trung Huyên</span>
                         <span className="block sm:inline">&hearts;</span>
                         <span className="block sm:inline">Nguyễn Phượng</span>
@@ -134,46 +134,55 @@ export default function SectionOne() {
                                 Xác nhận tham dự
                             </Button>
                         </MagneticButton>
-                        <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
-                            <ModalContent>
+                        <Modal
+                            isOpen={isOpen}
+                            onOpenChange={onOpenChange}
+                            placement="center"
+                            backdrop="blur"
+                        >
+                            <ModalContent className="text-black">
                                 {(onClose) => (
-                                    <Form
-                                        onSubmit={handleSubmit}
-                                    >
-                                        <ModalHeader className="flex flex-col gap-1 text-black">Modal
-                                            Title</ModalHeader>
+                                    <form onSubmit={handleSubmit}>
+                                        <ModalHeader className="flex flex-col gap-1 text-black">Thông tin khách mời</ModalHeader>
                                         <ModalBody>
-
-                                            <RadioGroup label="Bạn là khách của"
-                                                        isRequired={true}
-                                                        defaultValue={guestOf}
-                                                        name={"guestOf"}
-                                                        onChange={(e) => setGuestOf(e.target.value)}
+                                            <RadioGroup
+                                                label="Bạn là khách của"
+                                                isRequired
+                                                value={guestOf}
+                                                onValueChange={setGuestOf}
                                             >
-                                                <Radio value="groom">Nhà trai</Radio>
-                                                <Radio value="bride">Nhà gái</Radio>
+                                                <Radio
+                                                    value="groom">
+                                                    <p className={"text-black"}>
+                                                        Nhà trai
+                                                    </p>
+                                                </Radio>
+                                                <Radio value="bride">
+                                                    <p className={"text-black"}>
+                                                        Nhà gái
+                                                    </p>
+                                                </Radio>
                                             </RadioGroup>
                                             <Input
+                                                color={"primary"}
                                                 isRequired
-                                                errorMessage="Vui lòng nhập đúng tên"
+                                                errorMessage={name.trim() === "" ? "Vui lòng nhập đúng tên" : ""}
                                                 label="Họ tên"
                                                 labelPlacement="outside"
-                                                name="fullName"
-                                                placeholder="Nhâp họ tên"
-                                                type="text"
+                                                placeholder="Nhập họ tên"
                                                 value={name}
-                                                onChange={(e) => setName(e.target.value)}
+                                                onValueChange={setName}
                                             />
                                         </ModalBody>
                                         <ModalFooter>
                                             <Button color="danger" variant="light" onPress={onClose}>
                                                 Đóng
                                             </Button>
-                                            <Button color="primary" onPress={onClose} type={"submit"}>
+                                            <Button color="primary" type="submit">
                                                 Xác nhận
                                             </Button>
                                         </ModalFooter>
-                                    </Form>
+                                    </form>
                                 )}
                             </ModalContent>
                         </Modal>
