@@ -22,7 +22,7 @@ export default function Home() {
             {/* Sound button*/}
             <div className={"fixed md:bottom-6 bottom-12 left-4 md:left-8"}>
                 <SpotifyButton songTitle={"Die with a Smile"} artist={"Lady Gaga & Bruno Mars."}
-                               albumArt={"/song.jpeg"} flacSrc={"/die_with_a_smile.flac"}/>
+                               albumArt={"/song.jpeg"} flacSrc={"/die_with_a_smile.mp3"}/>
             </div>
         </main>
     );

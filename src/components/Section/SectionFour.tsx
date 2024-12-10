@@ -21,27 +21,27 @@ export default function SectionFour() {
     const cards = [
         {
             title: "Ảnh cưới 1",
-            src: "/NHO02790.JPG",
+            src: "/album/NHO02790.JPG",
         },
         {
             title: "Ảnh cưới 2",
-            src: "/NHO02988.JPG",
+            src: "/album/NHO02988.JPG",
         },
         {
             title: "Ảnh cưới 3",
-            src: "/NHO03081.JPG",
+            src: "/album/NHO03081.JPG",
         },
         {
             title: "Ảnh cưới 4",
-            src: "/NHO03102.JPG",
+            src: "/album/NHO03102.JPG",
         },
         {
             title: "Ảnh cưới 5",
-            src: "/NHO03152.JPG",
+            src: "/album/NHO03152.JPG",
         },
         {
             title: "Ảnh cưới 6",
-            src: "/NHO03246.JPG",
+            src: "/album/NHO03246.JPG",
         },
         {
             title: "Ảnh cưới 7",
