@@ -41,6 +41,36 @@ export default function SectionOne() {
 
     const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const {isOpen, onOpen, onOpenChange} = useDisclosure();
+
+    const [name, setName] = useState('')
+    const [guestOf, setGuestOf] = useState("groom")
+
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault()
+
+
+        try {
+            console.log({name, guestOf})
+            const response = await fetch('/api/send-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({name, guestOf}),
+            })
+
+            if (response.ok) {
+                setName('')
+            } else {
+                throw new Error('Failed to send email')
+            }
+        } catch (error) {
+            console.error(error)
+        }
+    }
+
     useEffect(() => {
         const timer = setInterval(() => {
             setTimeLeft(calculateTimeLeft());
@@ -53,14 +83,12 @@ export default function SectionOne() {
         return <div>Countdown finished!</div>;
     }
 
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const {isOpen, onOpen, onOpenChange} = useDisclosure();
-
 
     return (
         <div className="w-screen h-screen relative">
             <div className="absolute inset-0">
                 <Image
+                    loading={"eager"}
                     src={hero}
                     alt="Hero Image"
                     fill
@@ -109,42 +137,43 @@ export default function SectionOne() {
                         <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
                             <ModalContent>
                                 {(onClose) => (
-                                    <>
+                                    <Form
+                                        onSubmit={handleSubmit}
+                                    >
                                         <ModalHeader className="flex flex-col gap-1 text-black">Modal
                                             Title</ModalHeader>
                                         <ModalBody>
-                                            <Form
-                                                onSubmit={(e) => {
-                                                    e.preventDefault();
-                                                    onClose();
-                                                }}
+
+                                            <RadioGroup label="Bạn là khách của"
+                                                        isRequired={true}
+                                                        defaultValue={guestOf}
+                                                        name={"guestOf"}
+                                                        onChange={(e) => setGuestOf(e.target.value)}
                                             >
-                                                <RadioGroup label="Bạn là khách của"
-                                                            isRequired={true}
-                                                >
-                                                    <Radio value="groom">Nhà trai</Radio>
-                                                    <Radio value="bride">Nhà gái</Radio>
-                                                </RadioGroup>
-                                                <Input
-                                                    isRequired
-                                                    errorMessage="Vui lòng nhập đúng tên"
-                                                    label="Họ tên"
-                                                    labelPlacement="outside"
-                                                    name="fullName"
-                                                    placeholder="Nhâp họ tên"
-                                                    type="text"
-                                                />
-                                            </Form>
+                                                <Radio value="groom">Nhà trai</Radio>
+                                                <Radio value="bride">Nhà gái</Radio>
+                                            </RadioGroup>
+                                            <Input
+                                                isRequired
+                                                errorMessage="Vui lòng nhập đúng tên"
+                                                label="Họ tên"
+                                                labelPlacement="outside"
+                                                name="fullName"
+                                                placeholder="Nhâp họ tên"
+                                                type="text"
+                                                value={name}
+                                                onChange={(e) => setName(e.target.value)}
+                                            />
                                         </ModalBody>
                                         <ModalFooter>
                                             <Button color="danger" variant="light" onPress={onClose}>
                                                 Đóng
                                             </Button>
-                                            <Button color="primary" onPress={onClose}>
+                                            <Button color="primary" onPress={onClose} type={"submit"}>
                                                 Xác nhận
                                             </Button>
                                         </ModalFooter>
-                                    </>
+                                    </Form>
                                 )}
                             </ModalContent>
                         </Modal>

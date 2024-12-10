@@ -2,12 +2,14 @@ import CoupleCards from "@/components/couple-cards";
 import Image from 'next/image';
 
 import hero from '@/assets/hero.webp';
+import {Spacer} from "@nextui-org/react";
 
 export default function SectionTwo() {
     return (
         <div className="w-screen h-screen relative overflow-y-scroll bg-black">
             <div className="absolute inset-0">
                 <Image
+                    loading={"eager"}
                     src={hero}
                     alt="Hero Image"
                     layout="fill"
@@ -20,6 +22,8 @@ export default function SectionTwo() {
                 <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">Chú rể & Cô dâu</h1>
                 <CoupleCards/>
             </div>
+            <Spacer y={24}/>
+
         </div>
     )
 }

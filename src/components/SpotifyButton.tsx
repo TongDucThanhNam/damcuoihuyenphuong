@@ -70,7 +70,7 @@ export default function SpotifyButton({songTitle, artist, albumArt, flacSrc}: Sp
             </div>
 
             {/* Animated border */}
-            <div className="absolute inset-0 border-2 border-transparent animate-border-spin"/>
+            {/*<div className="absolute inset-0 border-2 border-transparent animate-border-spin"/>*/}
         </Button>
     )
 }

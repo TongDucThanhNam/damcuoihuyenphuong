@@ -5,20 +5,18 @@ import React from "react";
 import {Timeline} from "@/components/ui/timeline";
 
 import img_2020 from "@/assets/timeline/2020.jpeg";
-import img_2020a from "@/assets/timeline/2020a.jpg";
-import img_2020b from "@/assets/timeline/2020b.jpg";
 import img_2021a from "@/assets/timeline/2021a.jpg";
 import img_2021b from "@/assets/timeline/2021b.jpg";
 import img_2022a from "@/assets/timeline/2022a.jpg";
 import img_2023 from "@/assets/timeline/2023.jpg";
 import img_2023a from "@/assets/timeline/2023a.jpg";
 import img_2023b from "@/assets/timeline/2023b.jpg";
-import img_2023c from "@/assets/timeline/2023c.jpg";
 import img_2024a from "@/assets/timeline/2024a.jpeg";
 import img_2024b from "@/assets/timeline/2024b.jpg";
 import img_2024c from "@/assets/timeline/2024c.jpeg";
 import img_2024d from "@/assets/timeline/2024d.jpg";
 import hero from "@/assets/hero.webp";
+import {Spacer} from "@nextui-org/react";
 
 
 export default function SectionThree() {
@@ -37,7 +35,7 @@ export default function SectionThree() {
                         gần 5 năm, giờ đây chúng mình đã sắp ở một &#34; Cương vị mới &#34; và sắp kêu &#34;gâu
                         gâu&#34; ^^
                     </p>
-                    <div className={"grid justify-center grid-cols-1 md:grid-cols-2 space-x-8"}>
+                    <div className={"grid justify-center grid-cols-1 md:grid-cols-2 gap-2"}>
                         <Image
                             src={img_2020}
                             alt="2020"
@@ -59,7 +57,7 @@ export default function SectionThree() {
                         tâm sự, chia sẻ với nhau những câu chuyện trong thời gian học online tại nhà.
 
                     </p>
-                    <div className={"grid justify-center grid-cols-1 md:grid-cols-2 space-x-8"}>
+                    <div className={"grid justify-center grid-cols-1 md:grid-cols-2 gap-2"}>
                         <Image
                             src={img_2021a}
                             alt="2020"
@@ -87,7 +85,7 @@ export default function SectionThree() {
                         Chúng mình của hiện tại&#34;
 
                     </p>
-                    <div className={"grid justify-center grid-cols-1 md:grid-cols-2 space-x-8"}>
+                    <div className={"grid justify-center grid-cols-1 md:grid-cols-2 gap-2"}>
                         <Image
                             src={img_2022a}
                             alt="2020"
@@ -114,7 +112,7 @@ export default function SectionThree() {
                         thời gian vui vẻ nhất trong 4 năm sinh viên của chúng mình. Cùng nhau học tập, làm việc, ăn
                         chơi,...
                     </p>
-                    <div className={"justify-center grid grid-cols-1 md:grid-cols-2 space-x-8"}>
+                    <div className={"justify-center grid grid-cols-1 md:grid-cols-2 gap-2"}>
                         <Image
                             src={img_2023a}
                             alt="2020"
@@ -193,6 +191,8 @@ export default function SectionThree() {
              style={{backgroundColor: "#B6E1F6"}}
         >
             <Timeline data={data}/>
+            <Spacer y={24}/>
+
         </div>
     );
 }
