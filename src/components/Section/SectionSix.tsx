@@ -28,37 +28,6 @@ export default function SectionSix() {
                 <div className={"flex flex-col w-full max-w-6xl gap-8 md:flex-row"}>
                     <Card className="w-full max-w-[450px] p-4 md:p-6 bg-white/20 backdrop-blur-md hover:bg-white/30 mx-auto">
                         <CardHeader className="flex flex-col items-center pb-6">
-                            <h3 className="text-2xl font-semibold  tracking-wider">
-                                Mừng cưới cho cô dâu
-                            </h3>
-                        </CardHeader>
-                        <CardBody className="flex flex-col items-center gap-6">
-                            <div
-                                className="relative w-64 h-64 overflow-hidden border-4 border-white bg-pink-100">
-                                <Image
-                                    src={phuong}
-                                    alt="Nguyễn Thị Phượng"
-                                    className="object-cover"
-                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                />
-                            </div>
-
-                            <div className="text-center">
-                                <h2 className="text-3xl font-dancing-script  mb-4">
-                                    Nguyễn Thị Phượng
-                                </h2>
-                                <div className=" text-xl space-y-2">
-                                    <p>STK: 4520703048</p>
-                                </div>
-                                <div className=" text-xl space-y-2">
-                                    <p>Ngân hàng: BIDV</p>
-                                </div>
-                            </div>
-                        </CardBody>
-                    </Card>
-
-                    <Card className="w-full max-w-[450px] p-4 md:p-6 bg-white/20 backdrop-blur-md hover:bg-white/30 mx-auto">
-                        <CardHeader className="flex flex-col items-center pb-6">
                             <h3 className="text-2xl font-semibold ">
                                 Mừng cưới cho Chú rể
                             </h3>
@@ -80,6 +49,37 @@ export default function SectionSix() {
                                 </h2>
                                 <div className=" text-xl space-y-2">
                                     <p>STK: 2224154678</p>
+                                </div>
+                                <div className=" text-xl space-y-2">
+                                    <p>Ngân hàng: BIDV</p>
+                                </div>
+                            </div>
+                        </CardBody>
+                    </Card>
+
+                    <Card className="w-full max-w-[450px] p-4 md:p-6 bg-white/20 backdrop-blur-md hover:bg-white/30 mx-auto">
+                        <CardHeader className="flex flex-col items-center pb-6">
+                            <h3 className="text-2xl font-semibold  tracking-wider">
+                                Mừng cưới cho cô dâu
+                            </h3>
+                        </CardHeader>
+                        <CardBody className="flex flex-col items-center gap-6">
+                            <div
+                                className="relative w-64 h-64 overflow-hidden border-4 border-white bg-pink-100">
+                                <Image
+                                    src={phuong}
+                                    alt="Nguyễn Thị Phượng"
+                                    className="object-cover"
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                />
+                            </div>
+
+                            <div className="text-center">
+                                <h2 className="text-3xl font-dancing-script  mb-4">
+                                    Nguyễn Thị Phượng
+                                </h2>
+                                <div className=" text-xl space-y-2">
+                                    <p>STK: 4520703048</p>
                                 </div>
                                 <div className=" text-xl space-y-2">
                                     <p>Ngân hàng: BIDV</p>

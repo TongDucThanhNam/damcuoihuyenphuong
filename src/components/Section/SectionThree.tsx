@@ -17,6 +17,8 @@ import img_2024c from "@/assets/timeline/2024c.jpeg";
 import img_2024d from "@/assets/timeline/2024d.jpg";
 import hero from "@/assets/hero.webp";
 import {Spacer} from "@nextui-org/react";
+import { motion } from "motion/react"
+
 
 
 export default function SectionThree() {
@@ -39,7 +41,7 @@ export default function SectionThree() {
                         <Image
                             src={img_2020}
                             alt="2020"
-                            className="rounded-lg"
+                            className="rounded-lg motion-preset-shrink motion-duration-2000 "
                         />
                     </div>
                 </div>
@@ -116,20 +118,14 @@ export default function SectionThree() {
                         <Image
                             src={img_2023a}
                             alt="2020"
-                            className="rounded-lg"
+                            className="rounded-lg motion-preset-slide-right "
                         />
                         <Image
                             src={img_2023b}
                             alt="2020"
                             className="rounded-lg"
                         />
-                        {/*<Image*/}
-                        {/*    src="2023c.jpg"*/}
-                        {/*    alt="2020"*/}
-                        {/*    className="rounded-lg"*/}
-                        {/*/>*/}
                     </div>
-
                 </div>
             ),
         },

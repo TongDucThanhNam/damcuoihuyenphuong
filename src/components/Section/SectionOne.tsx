@@ -1,6 +1,5 @@
 "use client"
 
-import CountDown from "@/components/CountDown";
 import {
     Button, Form, Input,
     Modal,
@@ -17,6 +16,12 @@ import {
 import MagneticButton from "@/components/ui/ManeticButton";
 import {useEffect, useState} from "react";
 import Image from "next/image";
+
+import dynamic from "next/dynamic";
+
+const CountDown = dynamic(() => import("@/components/CountDown"), {
+    ssr: false,
+});
 
 import hero from "@/assets/hero.webp";
 
@@ -106,7 +111,7 @@ export default function SectionOne() {
                         <span className="block sm:inline">&hearts;</span>
                         <span className="block sm:inline">Nguyễn Phượng</span>
                     </h1>
-                    <p className="text-4xl mt-2 text-white flex items-center">
+                    <p className="text-4xl mt-2 text-white flex items-center motion-preset-confetti  ">
                         We’re getting married
                         <Image
                             src={"/wedding.gif"}

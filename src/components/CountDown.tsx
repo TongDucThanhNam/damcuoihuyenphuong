@@ -1,3 +1,5 @@
+"use client"
+
 interface CountDownProps {
     timeLeft: { [key: string]: number }
 }
