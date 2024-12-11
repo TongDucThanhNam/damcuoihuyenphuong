@@ -1,14 +1,17 @@
 "use client"
 
 import {
-    Button, Form, Input,
+    Button,
+    Input,
     Modal,
     ModalBody,
-    ModalContent, ModalFooter,
+    ModalContent,
+    ModalFooter,
     ModalHeader,
-    Popover,
-    PopoverContent,
-    PopoverTrigger, Radio, RadioGroup, Spacer, useDisclosure
+    Radio,
+    RadioGroup,
+    Spacer,
+    useDisclosure
 } from "@nextui-org/react";
 import {
     SendIcon,
@@ -148,7 +151,8 @@ export default function SectionOne() {
                             <ModalContent className="text-black">
                                 {(onClose) => (
                                     <form onSubmit={handleSubmit}>
-                                        <ModalHeader className="flex flex-col gap-1 text-black">Thông tin khách mời</ModalHeader>
+                                        <ModalHeader className="flex flex-col gap-1 text-black">Thông tin khách
+                                            mời</ModalHeader>
                                         <ModalBody>
                                             <RadioGroup
                                                 label="Bạn là khách của"
@@ -183,7 +187,7 @@ export default function SectionOne() {
                                             <Button color="danger" variant="light" onPress={onClose}>
                                                 Đóng
                                             </Button>
-                                            <Button color="primary" type="submit">
+                                            <Button color="primary" type="submit" onPress={onClose}>
                                                 Xác nhận
                                             </Button>
                                         </ModalFooter>
@@ -193,7 +197,6 @@ export default function SectionOne() {
                         </Modal>
                     </div>
                     <Spacer y={28}/>
-
                 </div>
             </div>
         </div>
