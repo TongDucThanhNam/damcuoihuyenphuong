@@ -114,14 +114,14 @@ export default function SectionOne() {
                         <span className="block sm:inline">&hearts;</span>
                         <span className="block sm:inline">Nguyễn Phượng</span>
                     </h1>
-                    <p className="text-4xl mt-2 text-white flex items-center motion-preset-confetti  ">
+                    <p className="text-2xl sm:text-4xl mt-2 text-white flex items-center motion-preset-confetti">
                         We’re getting married
                         <Image
                             src={"/wedding.gif"}
                             alt="Wedding"
-                            width={30}
-                            height={30}
-                            className="ml-2"
+                            width={20}
+                            height={20}
+                            className="ml-2 sm:ml-4"
                         />
                     </p>
                     <div className={"w-full h-full"}>
