@@ -5,14 +5,15 @@ import {
     useTransform,
     motion,
 } from "motion/react";
-import React, { useEffect, useRef, useState } from "react";
+import React, {useEffect, useRef, useState} from "react";
+import {TextGenerateEffect} from "@/components/ui/text-generate-effect";
 
 interface TimelineEntry {
     title: string;
     content: React.ReactNode;
 }
 
-export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
+export const Timeline = ({data}: { data: TimelineEntry[] }) => {
     const ref = useRef<HTMLDivElement>(null);
     const containerRef = useRef<HTMLDivElement>(null);
     // const containerRef = useRef<any>(null);
@@ -25,7 +26,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         }
     }, [ref]);
 
-    const { scrollYProgress } = useScroll({
+    const {scrollYProgress} = useScroll({
         target: containerRef,
         offset: ["start 10%", "end 50%"],
     });
@@ -44,10 +45,8 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                 <h2 className="text-lg md:text-4xl mb-4 text-black max-w-4xl">
                     ♥ Hành Trình Tình Yêu: Chuyện Đôi Ta
                 </h2>
-                <p className="text-neutral-700 text-xl max-w-sm">
-                    Từ những ngày đầu gặp gỡ, qua từng khoảnh khắc ngọt ngào đến những dấu mốc đáng nhớ, cùng nhau vẽ
-                    nên bức tranh tình yêu rực rỡ. Hãy cùng nhìn lại hành trình đặc biệt mà chỉ đôi ta hiểu!
-                </p>
+                <TextGenerateEffect
+                    words={"Từ những ngày đầu gặp gỡ, qua từng khoảnh khắc ngọt ngào đến những dấu mốc đáng nhớ, cùng nhau vẽ nên bức tranh tình yêu rực rỡ. Hãy cùng nhìn lại hành trình đặc biệt mà chỉ đôi ta hiểu!"}/>
             </div>
 
             <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
