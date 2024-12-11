@@ -114,7 +114,7 @@ export default function SectionOne() {
                         <span className="block sm:inline">&hearts;</span>
                         <span className="block sm:inline">Nguyễn Phượng</span>
                     </h1>
-                    <p className="text-2xl sm:text-4xl mt-2 text-white flex items-center motion-preset-confetti">
+                    <p className="text-2xl sm:text-4xl mt-2 text-white flex items-center motion-preset-confetti motion-duration-1500 motion-delay-2000">
                         We’re getting married
                         <Image
                             src={"/wedding.gif"}
