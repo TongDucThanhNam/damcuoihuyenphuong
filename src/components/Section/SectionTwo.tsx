@@ -23,7 +23,6 @@ export default function SectionTwo() {
                 <CoupleCards/>
             </div>
             <Spacer y={24}/>
-
         </div>
     )
 }

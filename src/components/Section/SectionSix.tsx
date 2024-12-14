@@ -9,7 +9,7 @@ import huyen from "@/assets/qr/huyen.png";
 
 export default function SectionSix() {
     return (
-        <div className="w-screen h-screen relative overflow-y-scroll ">
+        <div className="w-screen h-screen relative overflow-y-scroll bg-[#F7E7CE] text-gray-800">
             <div className={"flex flex-col text-center items-center w-full justify-center"}>
                 <div className={"flex w-full flex-col text-center items-center"}>
                     <h1 className="text-4xl font-bold mt-5">Mừng cưới Online</h1>
@@ -26,7 +26,7 @@ export default function SectionSix() {
             </div>
             <div className={"relative w-full min-h-screen flex flex-col justify-start items-center px-4 py-8 md:py-16"}>
                 <div className={"flex flex-col w-full max-w-6xl gap-8 md:flex-row"}>
-                    <Card className="w-full max-w-[450px] p-4 md:p-6 bg-white/20 backdrop-blur-md hover:bg-white/30 mx-auto">
+                    <Card className="w-full max-w-[450px] p-4 md:p-6 bg-white/20 backdrop-blur-md hover:bg-white/30 mx-auto text-gray-800 bg-gray-50">
                         <CardHeader className="flex flex-col items-center pb-6">
                             <h3 className="text-2xl font-semibold ">
                                 Mừng cưới cho Chú rể
@@ -57,7 +57,7 @@ export default function SectionSix() {
                         </CardBody>
                     </Card>
 
-                    <Card className="w-full max-w-[450px] p-4 md:p-6 bg-white/20 backdrop-blur-md hover:bg-white/30 mx-auto">
+                    <Card className="w-full max-w-[450px] p-4 md:p-6 bg-white/20 backdrop-blur-md hover:bg-white/30 mx-auto text-gray-800 bg-gray-50 ">
                         <CardHeader className="flex flex-col items-center pb-6">
                             <h3 className="text-2xl font-semibold  tracking-wider">
                                 Mừng cưới cho cô dâu

@@ -42,7 +42,7 @@ export const Timeline = ({data}: { data: TimelineEntry[] }) => {
         >
 
             <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
-                <h2 className="text-lg md:text-4xl mb-4 text-black max-w-4xl motion-preset-shrink motion-duration-2000">
+                <h2 className="text-lg md:text-4xl mb-4 text-black max-w-4xl motion-preset-shrink motion-duration-2000 font-geist-mono">
                     ♥ Hành Trình Tình Yêu: Chuyện Đôi Ta
                 </h2>
                 <TextGenerateEffect
@@ -61,7 +61,7 @@ export const Timeline = ({data}: { data: TimelineEntry[] }) => {
                                 className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-white flex items-center justify-center">
                                 <div className="h-4 w-4 rounded-full bg-neutral-200 border border-neutral-300 p-2"/>
                             </div>
-                            <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold text-neutral-500 ">
+                            <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold text-neutral-500 font-geist-mono">
                                 {item.title}
                             </h3>
                         </div>

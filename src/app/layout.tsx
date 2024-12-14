@@ -4,12 +4,12 @@ import "./globals.css";
 import {Providers} from "@/app/provider";
 
 const geistSans = localFont({
-    src: "./fonts/GeistVF.woff",
+    src: "./fonts/ResistenzaCopperlove.woff",
     variable: "--font-geist-sans",
     weight: "100 900",
 });
-const geistMono = localFont({
-    src: "./fonts/GeistMonoVF.woff",
+ const geistMono = localFont({
+    src: "./fonts/DancingScript-VariableFont_wght.ttf",
     variable: "--font-geist-mono",
     weight: "100 900",
 });
@@ -27,7 +27,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body
-                className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+                className={`${geistMono.className} ${geistMono.variable}`}
             >
                 <Providers>
                     {children}

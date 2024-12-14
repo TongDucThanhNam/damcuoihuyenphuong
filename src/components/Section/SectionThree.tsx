@@ -27,7 +27,7 @@ export default function SectionThree() {
             title: "2020",
             content: (
                 <div>
-                    <p className={"text-black text-xl"}>
+                    <p className={"text-black text-xl font-geist-mono"}>
                         Chúng mình học cùng lớp hồi đại học đã từng là bạn &#34; khá thân &#34; từ hồi mới vào học.
                         Đã
                         từng nói
@@ -37,7 +37,7 @@ export default function SectionThree() {
                         gần 5 năm, giờ đây chúng mình đã sắp ở một &#34; Cương vị mới &#34; và sắp kêu &#34;gâu
                         gâu&#34; ^^
                     </p>
-                    <div className={"grid justify-center grid-cols-1 md:grid-cols-2 gap-2"}>
+                    <div className={"grid justify-center grid-cols-1 md:grid-cols-2 gap-2 "}>
                         <Image
                             src={img_2020}
                             alt="2020"
@@ -51,7 +51,7 @@ export default function SectionThree() {
             title: "2021",
             content: (
                 <div>
-                    <p className={"text-black text-xl"}>
+                    <p className={"text-black text-xl font-geist-mono"}>
                         Thời điểm đó, chúng mình đều đang độc thân. <br/> Phượng ở Quốc Oai còn mình ở Hà Nam, do
                         ảnh
                         hưởng của dịch covid nên cơ hội gặp nhau không nhiều. <br/>Dù vậy chúng mình vẫn luôn dành thời
@@ -78,7 +78,7 @@ export default function SectionThree() {
             title: "2022",
             content: (
                 <div>
-                    <p className={"text-black text-xl"}>
+                    <p className={"text-black text-xl font-geist-mono"}>
                         Năm 2022 ảnh hưởng của dịch giảm dần, chúng mình quay trở lại giảng đường và có nhiều thời
                         gian đi chơi cùng nhau hơn. <br/>
                         Và rồi tới 1 ngày đặc biệt, ngày 11/05/2022 khi cả 2 đã suy nghĩ đủ kỹ về mối quan hệ, thì chúng
@@ -107,7 +107,7 @@ export default function SectionThree() {
             title: "2023",
             content: (
                 <div className={""}>
-                    <p className={"text-black text-xl"}>
+                    <p className={"text-black text-xl font-geist-mono"}>
                         Đầu năm 2023, chúng mình bắt đầu thực tập ở cùng một công ty và từ đây chúng mình gần như dành
                         phần lớn thới gian cho nhau. &#34;Sáng đèo nhau đi học chiều lai nhau đi làm ^^&#34;. Đây cũng
                         là khoảng
@@ -133,7 +133,7 @@ export default function SectionThree() {
             title: "2024",
             content: (
                 <div>
-                    <p className={"text-black text-xl"}>
+                    <p className={"text-black text-xl font-geist-mono"}>
                         Ngày chung đôi: Hơn 2 năm tình bạn, và 2 năm tình yêu không phải là quãng thời gian quá
                         dài, nhưng cũng không quá ngắn, đủ để chúng mình nhận ra nhiều điều. <br/> Cuối cùng ngày vui
                         nhất của
@@ -183,8 +183,7 @@ export default function SectionThree() {
         },
     ];
     return (
-        <div className="w-full h-screen overflow-y-scroll"
-             style={{backgroundColor: "#B6E1F6"}}
+        <div className="w-full h-screen overflow-y-scroll bg-[#FFFFF0]"
         >
             <Timeline data={data}/>
             <Spacer y={24}/>

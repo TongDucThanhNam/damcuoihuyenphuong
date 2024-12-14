@@ -17,6 +17,9 @@ export default {
                 background: "var(--background)",
                 foreground: "var(--foreground)",
             },
+            fontFamily: {
+                'geist-mono': ['var(--font-geist-mono)'],
+            },
         },
     },
     darkMode: "class",

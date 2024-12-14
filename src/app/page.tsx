@@ -6,6 +6,7 @@ import SectionFour from "@/components/Section/SectionFour";
 import SpotifyButton from "@/components/SpotifyButton";
 import SectionFive from "@/components/Section/SectionFive";
 import SectionSix from "@/components/Section/SectionSix";
+import SectionSeven from "@/components/Section/SectionSeven";
 
 export default function Home() {
     return (
@@ -17,6 +18,7 @@ export default function Home() {
                 <SectionFour/>
                 <SectionFive/>
                 <SectionSix/>
+                <SectionSeven/>
             </Slider>
 
             {/* Sound button*/}

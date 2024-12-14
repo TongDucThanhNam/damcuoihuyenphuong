@@ -82,8 +82,8 @@ export default function SectionFour() {
     ];
 
     return (
-        <div className={"flex h-screen flex-col items-center overflow-y-scroll"}>
-            <div className={"text-4xl font-bold mt-20 mb-10"}>
+        <div className={"flex h-screen flex-col items-center overflow-y-scroll bg-[#FFFFF0]"}>
+            <div className={"text-4xl font-bold mt-20 mb-10 text-black"}>
                 Album hình cưới
             </div>
 
