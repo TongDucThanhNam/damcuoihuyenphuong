@@ -14,7 +14,7 @@ const ElegantButton: React.FC<ElegantButtonProps> = ({ onClick, onTouchStart, ar
                  flex items-center justify-center transition-all duration-300
                  hover:bg-rose-200 hover:border-rose-400 focus:outline-none focus:ring-2 focus:ring-rose-400 focus:ring-opacity-50"
             onClick={onClick}
-            onTouchStart={onTouchStart}
+            // onTouchStart={onTouchStart}
             aria-label={ariaLabel}
         >
             {children}

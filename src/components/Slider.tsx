@@ -108,7 +108,7 @@ const Slider: React.FC<SliderProps> = ({ children }) => {
             {/*</div>*/}
 
             <div className="fixed bottom-6 right-8">
-                <div className="relative bg-white bg-opacity-80 rounded-full p-4 shadow-lg">
+                <div className="relative p-4  bg-none ">
                     <DecorativeElement/>
                     <NavigationButtons goToPrevious={goToPrevious} goToNext={goToNext}/>
                 </div>

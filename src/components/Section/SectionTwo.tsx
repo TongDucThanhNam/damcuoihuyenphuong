@@ -6,7 +6,7 @@ import {Spacer} from "@nextui-org/react";
 
 export default function SectionTwo() {
     return (
-        <div className="w-screen h-screen relative overflow-y-scroll bg-black">
+        <div className="w-screen h-screen relative overflow-y-scroll md:overflow-y-hidden bg-black">
             <div className="absolute inset-0">
                 <Image
                     loading={"eager"}
@@ -22,7 +22,7 @@ export default function SectionTwo() {
                 <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">Chú rể & Cô dâu</h1>
                 <CoupleCards/>
             </div>
-            <Spacer y={24}/>
+            <div className={"h-24 md:hidden"}/>
         </div>
     )
 }

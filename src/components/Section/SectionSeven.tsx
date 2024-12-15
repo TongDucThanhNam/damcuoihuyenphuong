@@ -7,7 +7,7 @@ import {CardBody, CardFooter, CardHeader} from "@nextui-org/card";
 
 export default function SectionSeven() {
     return (
-        <div className="w-screen h-screen relative overflow-y-scroll bg-[#FFFFF0]">
+        <div className="w-screen h-screen relative overflow-y-scroll md:overflow-y-hidden bg-[#FFFFF0]">
             <div className="absolute inset-0">
                 <Image
                     loading={"eager"}

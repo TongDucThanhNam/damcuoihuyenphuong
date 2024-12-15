@@ -1,21 +1,8 @@
-import {FocusCards} from "@/components/ui/focus-cards";
-// import anhCuoi1 from "@/assets/album/NHO02790.JPG";
-// import anhCuoi2 from "@/assets/album/NHO02988.JPG";
-// import anhCuoi3 from "@/assets/album/NHO03081.JPG";
-// import anhCuoi4 from "@/assets/album/NHO03102.JPG";
-// import anhCuoi5 from "@/assets/album/NHO03152.JPG";
-// import anhCuoi6 from "@/assets/album/NHO03246.JPG";
-// import anhCuoi7 from "@/assets/album/NHO03594.JPG";
-// import anhCuoi8 from "@/assets/album/NHO03631.JPG";
-// import anhCuoi9 from "@/assets/album/NHO03653.JPG";
-// import anhCuoi10 from "@/assets/album/NHO03668.JPG";
-// import anhCuoi11 from "@/assets/album/NHO03956.JPG";
-// import anhCuoi12 from "@/assets/album/NHO04177.JPG";
-// import anhCuoi13 from "@/assets/album/NHO04275.JPG";
-// import anhCuoi14 from "@/assets/album/NHO04364.JPG";
-// import anhCuoi15 from "@/assets/album/NHO04406.JPG";
-// import anhCuoi16 from "@/assets/album/NHO04433.JPG";
+"use client"
 
+import {FocusCards} from "@/components/ui/focus-cards";
+import {Button} from "@nextui-org/react";
+import {Link} from "@nextui-org/link";
 
 export default function SectionFour() {
     const cards = [
@@ -50,7 +37,7 @@ export default function SectionFour() {
         {
             title: "Ảnh cưới 8",
             src: "/album/NHO03631.JPG",
-        },        {
+        }, {
             title: "Ảnh cưới 9",
             src: "/album/NHO03653.JPG",
         },
@@ -69,13 +56,13 @@ export default function SectionFour() {
         {
             title: "Ảnh cưới 13",
             src: "/album/NHO04275.JPG",
-        },        {
+        }, {
             title: "Ảnh cưới 14",
             src: "/album/NHO04364.JPG",
-        },        {
+        }, {
             title: "Ảnh cưới 15",
             src: "/album/NHO04406.JPG",
-        },        {
+        }, {
             title: "Ảnh cưới 16",
             src: "/album/NHO04433.JPG",
         },
@@ -83,11 +70,21 @@ export default function SectionFour() {
 
     return (
         <div className={"flex h-screen flex-col items-center overflow-y-scroll bg-[#FFFFF0]"}>
-            <div className={"text-4xl font-bold mt-20 mb-10 text-black"}>
-                Album hình cưới
-            </div>
+            <div className={"flex flex-col text-4xl font-bold mt-20 mb-10 text-black"}>
+                <p>Album hình cưới</p>
+                <Button
+                    as={Link}
+                    href={"https://www.flickr.com/photos/terasumi/albums/72177720322594599/"}
+                    variant={"ghost"}
+                    className={"text-xl bg-pink-300"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Xem toàn bộ album
+                </Button>
 
-            <FocusCards cards={cards} />
+            </div>
+            <FocusCards cards={cards}/>
         </div>
     )
 }
