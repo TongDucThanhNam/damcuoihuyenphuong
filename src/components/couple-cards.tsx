@@ -87,6 +87,10 @@ export default function CoupleCards() {
                             </p>
                         </motion.div>
                     </CardBody>
+                    <div className="absolute top-10 left-5 w-16 h-16 border-l-3 border-t-3 border-pink-200"/>
+                    <div className="absolute top-10 right-5 w-16 h-16 border-r-3 border-t-3 border-pink-200"/>
+                    <div className="absolute bottom-8 left-5 w-16 h-16 border-l-3 border-b-3 border-pink-200"/>
+                    <div className="absolute bottom-8 right-5 w-16 h-16 border-r-3 border-b-3 border-pink-200"/>
                 </Card>
             </motion.div>
 
@@ -163,6 +167,11 @@ export default function CoupleCards() {
                             </p>
                         </motion.div>
                     </CardBody>
+
+                    <div className="absolute top-10 left-5 w-16 h-16 border-l-3 border-t-3 border-pink-200"/>
+                    <div className="absolute top-10 right-5 w-16 h-16 border-r-3 border-t-3 border-pink-200"/>
+                    <div className="absolute bottom-8 left-5 w-16 h-16 border-l-3 border-b-3 border-pink-200"/>
+                    <div className="absolute bottom-8 right-5 w-16 h-16 border-r-3 border-b-3 border-pink-200"/>
                 </Card>
             </motion.div>
         </div>

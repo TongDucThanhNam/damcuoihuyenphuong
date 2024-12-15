@@ -4,6 +4,7 @@ import Image from "next/image";
 import {Button, Card, Divider, Input, Link, Spacer, Textarea} from "@nextui-org/react";
 import {SendIcon} from "lucide-react";
 import {CardBody, CardFooter, CardHeader} from "@nextui-org/card";
+import {motion} from "motion/react";
 
 export default function SectionSeven() {
     return (
@@ -72,7 +73,7 @@ export default function SectionSeven() {
                         </Button>
                     </CardFooter>
                 </Card>
-            </div>
         </div>
-    )
+</div>
+)
 }
