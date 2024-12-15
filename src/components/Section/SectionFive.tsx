@@ -10,7 +10,7 @@ import hero from "@/assets/hero.webp";
 
 export default function SectionFive() {
     return (
-        <div className="w-screen h-screen relative overflow-y-scroll">
+        <div className="w-screen h-screen relative overflow-y-scroll md:overflow-y-hidden">
             <div className="absolute inset-0">
                 <Image
                     src={hero}
@@ -22,12 +22,13 @@ export default function SectionFive() {
                 />
             </div>
             <div className="absolute inset-0 bg-black bg-opacity-75"></div>
-            <div className={"text-4xl font-bold mt-20 text-white"}>
-                Lịch trình
-            </div>
 
             {/* Lịch trình Grid */}
-            <div className="w-full min-h-screen flex flex-col justify-start items-center px-4 py-8 md:py-16">
+            <div className="w-full min-h-screen flex flex-col justify-start items-center px-4 py-8 ">
+                <div className={"text-4xl font-bold mt-20 text-white"}>
+                    Lịch trình
+                </div>
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-6xl">
                     <Card className="w-full max-w-md mx-auto">
                         <CardBody className="p-0">

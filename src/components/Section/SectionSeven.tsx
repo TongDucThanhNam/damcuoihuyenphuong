@@ -31,11 +31,11 @@ export default function SectionSeven() {
                     onSubmit={(e) => e.preventDefault()}
                 >
                     <CardHeader>
-                        <h4 className="text-lg font-semibold text-pink-700">Gửi lời chúc</h4>
+                        <h4 className="text-2xl font-semibold text-pink-700">Gửi lời chúc</h4>
                     </CardHeader>
                     <CardBody className="space-y-4">
                         <Input
-                            className=""
+                            className="text-3xl"
                             label="Họ và tên"
                             aria-label="Name"
                             name="name"

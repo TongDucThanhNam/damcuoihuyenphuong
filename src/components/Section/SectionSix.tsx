@@ -15,7 +15,7 @@ export default function SectionSix() {
                     <h1 className="text-4xl font-bold mt-5">Mừng cưới Online</h1>
                 </div>
                 <div className="flex flex-col items-center mt-10">
-                    <p className=" text-xl max-w-4xl">
+                    <p className=" text-xl md:text-2xl max-w-4xl">
                         Chúng mình rất vui và hạnh phúc khi được chia sẻ niềm vui này cùng với mọi người. Chúng mình vẫn
                         rất mong sẽ nhận được sự chúc phúc từ
                         mọi ngừoi rất mong nhận được sự chúc mừng từ mọi người. Chúng mình sẽ rất cảm kích nếu mọi người
@@ -28,7 +28,7 @@ export default function SectionSix() {
                 <div className={"flex flex-col w-full max-w-6xl gap-8 md:flex-row"}>
                     <Card className="w-full max-w-[450px] p-4 md:p-6 bg-white/20 backdrop-blur-md hover:bg-white/30 mx-auto text-gray-800 bg-gray-50">
                         <CardHeader className="flex flex-col items-center pb-6">
-                            <h3 className="text-2xl font-semibold ">
+                            <h3 className="text-2xl md:text-3xl font-semibold ">
                                 Mừng cưới cho Chú rể
                             </h3>
                         </CardHeader>
@@ -44,13 +44,13 @@ export default function SectionSix() {
                             </div>
 
                             <div className="text-center">
-                                <h2 className="text-3xl  mb-4">
+                                <h2 className="text-3xl md:text-4xl font-bold   mb-4">
                                     Đỗ Trung Huyên
                                 </h2>
-                                <div className=" text-xl space-y-2">
+                                <div className=" text-xl space-y-2 font-bold">
                                     <p>STK: 2224154678</p>
                                 </div>
-                                <div className=" text-xl space-y-2">
+                                <div className=" text-xl space-y-2 font-bold">
                                     <p>Ngân hàng: BIDV</p>
                                 </div>
                             </div>
@@ -59,7 +59,7 @@ export default function SectionSix() {
 
                     <Card className="w-full max-w-[450px] p-4 md:p-6 bg-white/20 backdrop-blur-md hover:bg-white/30 mx-auto text-gray-800 bg-gray-50 ">
                         <CardHeader className="flex flex-col items-center pb-6">
-                            <h3 className="text-2xl font-semibold  tracking-wider">
+                            <h3 className="text-2xl md:text-3xl font-semibold  tracking-wider">
                                 Mừng cưới cho cô dâu
                             </h3>
                         </CardHeader>
@@ -75,13 +75,13 @@ export default function SectionSix() {
                             </div>
 
                             <div className="text-center">
-                                <h2 className="text-3xl font-dancing-script  mb-4">
+                                <h2 className="text-3xl md:text-4xl font-bold font-dancing-script  mb-4">
                                     Nguyễn Thị Phượng
                                 </h2>
-                                <div className=" text-xl space-y-2">
+                                <div className=" text-xl space-y-2 font-bold">
                                     <p>STK: 4520703048</p>
                                 </div>
-                                <div className=" text-xl space-y-2">
+                                <div className=" text-xl space-y-2 font-bold">
                                     <p>Ngân hàng: BIDV</p>
                                 </div>
                             </div>
