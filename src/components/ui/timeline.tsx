@@ -17,14 +17,14 @@ export const Timeline = ({data}: { data: TimelineEntry[] }) => {
     const ref = useRef<HTMLDivElement>(null);
     const containerRef = useRef<HTMLDivElement>(null);
     // const containerRef = useRef<any>(null);
-    const [height, setHeight] = useState(0);
+    const [height, setHeight] = useState(1000);
 
-    useEffect(() => {
-        if (ref.current) {
-            const rect = ref.current.getBoundingClientRect();
-            setHeight(rect.height);
-        }
-    }, [ref]);
+    // useEffect(() => {
+    //     if (ref.current) {
+    //         const rect = ref.current.getBoundingClientRect();
+    //         setHeight(rect.height);
+    //     }
+    // }, [ref]);
 
     const {scrollYProgress} = useScroll({
         target: containerRef,
@@ -58,8 +58,8 @@ export const Timeline = ({data}: { data: TimelineEntry[] }) => {
                         <div
                             className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
                             <div
-                                className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-white flex items-center justify-center">
-                                <div className="h-4 w-4 rounded-full bg-neutral-200 border border-neutral-300 p-2"/>
+                                className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-pink-100 flex items-center justify-center">
+                                <div className="h-4 w-4 rounded-full bg-pink-400 border border-neutral-300 p-2"/>
                             </div>
                             <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold text-neutral-500 font-geist-mono">
                                 {item.title}
@@ -85,7 +85,7 @@ export const Timeline = ({data}: { data: TimelineEntry[] }) => {
                             height: heightTransform,
                             opacity: opacityTransform,
                         }}
-                        className="absolute inset-x-0 top-0  w-[2px] bg-gradient-to-t from-purple-500 via-blue-500 to-transparent from-[0%] via-[10%] rounded-full"
+                        className="absolute inset-x-0 top-0  w-[3px] bg-gradient-to-t from-purple-500 via-blue-500 to-transparent from-[0%] via-[10%] rounded-full"
                     />
                 </div>
             </div>

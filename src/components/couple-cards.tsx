@@ -27,7 +27,7 @@ export default function CoupleCards() {
                             initial={{y: -20, opacity: 0}}
                             animate={isInView ? {y: 0, opacity: 1} : {y: -20, opacity: 0}}
                             transition={{delay: 0.2, duration: 0.4}}
-                            className="text-xl md:text-2xl font-semibold text-white"
+                            className="text-xl md:text-3xl font-semibold text-white"
                         >
                             Chú rể
                         </motion.h3>
@@ -37,15 +37,33 @@ export default function CoupleCards() {
                             initial={{scale: 0.8, opacity: 0}}
                             animate={isInView ? {scale: 1, opacity: 1} : {scale: 0.8, opacity: 0}}
                             transition={{delay: 0.3, duration: 0.5}}
-                            className="relative w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-white bg-pink-100"
+                            className="relative w-48 h-48 md:w-64 md:h-64"
                         >
-                            <Image
-                                src={"/groom.png"}
-                                alt="Chú rể"
-                                fill
-                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                style={{objectFit: "cover"}}
-                            />
+                            {/* Container with background */}
+                            <div className="relative w-full h-full p-2">
+                                {/* Image container */}
+                                <div className="relative w-full h-full rounded-full bg-pink-100 ">
+                                    <Image
+                                        src={"/groom.png"}
+                                        alt={"Chú rể"}
+                                        fill
+                                        priority
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                        className="rounded-full object-cover"
+                                    />
+                                </div>
+                                {/* SVG Border container */}
+                                <div className="absolute inset-0 z-10 ml-2">
+                                    <Image
+                                        src="/6.svg"
+                                        alt="Border"
+                                        fill
+                                        priority
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                        className="scale-110"
+                                    />
+                                </div>
+                            </div>
                         </motion.div>
                         <motion.div
                             initial={{y: 20, opacity: 0}}
@@ -85,7 +103,7 @@ export default function CoupleCards() {
                             initial={{y: -20, opacity: 0}}
                             animate={isInView ? {y: 0, opacity: 1} : {y: -20, opacity: 0}}
                             transition={{delay: 0.4, duration: 0.4}}
-                            className="text-xl md:text-2xl font-semibold text-white tracking-wider"
+                            className="text-xl md:text-3xl font-semibold text-white tracking-wider"
                         >
                             Cô dâu
                         </motion.h3>
@@ -94,16 +112,34 @@ export default function CoupleCards() {
                         <motion.div
                             initial={{scale: 0.8, opacity: 0}}
                             animate={isInView ? {scale: 1, opacity: 1} : {scale: 0.8, opacity: 0}}
-                            transition={{delay: 0.5, duration: 0.5}}
-                            className="relative w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-white bg-pink-100"
+                            transition={{delay: 0.3, duration: 0.5}}
+                            className="relative w-48 h-48 md:w-64 md:h-64"
                         >
-                            <Image
-                                src={bride}
-                                alt="Cô dâu"
-                                fill
-                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                style={{objectFit: "cover"}}
-                            />
+                            {/* Container with background */}
+                            <div className="relative w-full h-full p-2">
+                                {/* Image container */}
+                                <div className="relative w-full h-full rounded-full bg-pink-100 ">
+                                    <Image
+                                        src={bride}
+                                        alt={"Cô dâu"}
+                                        fill
+                                        priority
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                        className="rounded-full object-cover"
+                                    />
+                                </div>
+                                {/* SVG Border container */}
+                                <div className="absolute inset-0 z-10 ml-2">
+                                    <Image
+                                        src="/6.svg"
+                                        alt="Border"
+                                        fill
+                                        priority
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                        className="scale-110"
+                                    />
+                                </div>
+                            </div>
                         </motion.div>
                         <motion.div
                             initial={{y: 20, opacity: 0}}

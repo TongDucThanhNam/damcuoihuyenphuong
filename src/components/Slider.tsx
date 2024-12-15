@@ -3,6 +3,8 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { Button } from "@nextui-org/react"
 import { ChevronLeftIcon, ChevronRightIcon } from 'lucide-react'
+import DecorativeElement from "@/components/DecorativeElement";
+import NavigationButtons from "@/components/NavigationButtons";
 
 interface SliderProps {
     children: React.ReactNode[]
@@ -76,35 +78,41 @@ const Slider: React.FC<SliderProps> = ({ children }) => {
                 ))}
             </div>
 
-            <div
-                className={"fixed bottom-6 right-8 flex space-x-2"}
-            >
-                <Button
-                    color={"primary"}
-                    variant={"shadow"}
-                    isIconOnly={true}
-                    className=""
-                    onClick={goToPrevious}
-                    onTouchStart={goToPrevious}
+            {/*<div*/}
+            {/*    className={"fixed bottom-6 right-8 flex space-x-2"}*/}
+            {/*>*/}
+            {/*    <Button*/}
+            {/*        color={"primary"}*/}
+            {/*        variant={"shadow"}*/}
+            {/*        isIconOnly={true}*/}
+            {/*        className=""*/}
+            {/*        onClick={goToPrevious}*/}
+            {/*        onTouchStart={goToPrevious}*/}
 
-                    aria-label="Previous slide"
-                >
-                    <ChevronLeftIcon className="w-6 h-6"/>
-                </Button>
-                <Button
-                    color={"primary"}
-                    variant={"shadow"}
-                    isIconOnly={true}
-                    className=" "
-                    onClick={goToNext}
-                    onTouchStart={goToNext}
+            {/*        aria-label="Previous slide"*/}
+            {/*    >*/}
+            {/*        <ChevronLeftIcon className="w-6 h-6"/>*/}
+            {/*    </Button>*/}
+            {/*    <Button*/}
+            {/*        color={"primary"}*/}
+            {/*        variant={"shadow"}*/}
+            {/*        isIconOnly={true}*/}
+            {/*        className=" "*/}
+            {/*        onClick={goToNext}*/}
+            {/*        onTouchStart={goToNext}*/}
 
-                    aria-label="Next slide"
-                >
-                    <ChevronRightIcon className="w-6 h-6"/>
-                </Button>
+            {/*        aria-label="Next slide"*/}
+            {/*    >*/}
+            {/*        <ChevronRightIcon className="w-6 h-6"/>*/}
+            {/*    </Button>*/}
+            {/*</div>*/}
+
+            <div className="fixed bottom-6 right-8">
+                <div className="relative bg-white bg-opacity-80 rounded-full p-4 shadow-lg">
+                    <DecorativeElement/>
+                    <NavigationButtons goToPrevious={goToPrevious} goToNext={goToNext}/>
+                </div>
             </div>
-
 
             <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
                 {children.map((_, index) => (
