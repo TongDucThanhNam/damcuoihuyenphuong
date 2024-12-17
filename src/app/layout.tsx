@@ -17,6 +17,15 @@ const geistSans = localFont({
 export const metadata: Metadata = {
     title: "Huyên & Phượng",
     description: "Đám cưới của Huyên và Phượng",
+    openGraph: {
+        images: [
+            {
+                url: '/og_image.webp',
+                width: 1200,
+                height: 630,
+            },
+        ],
+    },
 };
 
 export default function RootLayout({
