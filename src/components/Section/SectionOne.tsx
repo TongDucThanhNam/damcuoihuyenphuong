@@ -44,7 +44,12 @@ export default function SectionOne() {
             };
         }
 
-        return null; // Đã hết thời gian
+        return {
+            days: Math.floor(0),
+            hours: Math.floor(0),
+            minutes: Math.floor(0),
+            seconds: Math.floor(0),
+        }; // Đã hết thời gian
     };
 
     const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
@@ -86,10 +91,6 @@ export default function SectionOne() {
 
         return () => clearInterval(timer); // Xóa bộ đếm khi component unmount
     }, []);
-
-    if (!timeLeft) {
-        return <div>Countdown finished!</div>;
-    }
 
 
     return (
