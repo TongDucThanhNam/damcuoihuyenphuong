@@ -64,24 +64,24 @@ export default function SectionOne() {
         e.preventDefault()
 
 
-        try {
-            console.log({name, guestOf})
-            const response = await fetch('/api/send-email', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({name, guestOf}),
-            })
+        // try {
+        //     console.log({name, guestOf})
+        //     const response = await fetch('/api/send-email', {
+        //         method: 'POST',
+        //         headers: {
+        //             'Content-Type': 'application/json',
+        //         },
+        //         body: JSON.stringify({name, guestOf}),
+        //     })
 
-            if (response.ok) {
-                setName('')
-            } else {
-                throw new Error('Failed to send email')
-            }
-        } catch (error) {
-            console.error(error)
-        }
+        //     if (response.ok) {
+        //         setName('')
+        //     } else {
+        //         throw new Error('Failed to send email')
+        //     }
+        // } catch (error) {
+        //     console.error(error)
+        // }
     }
 
     useEffect(() => {
